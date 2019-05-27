@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>Jagdish-Admin</sys_created_by>
+        <sys_created_on>2019-05-03 10:22:33</sys_created_on>
+        <sys_id>96f51affdb0133008d4c2fb7489619df</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_83194_cust_appli_certificates.x_83194_cust_appli.certificates_user</sys_name>
+        <sys_package display_value="Cust Application" source="x_83194_cust_appli">8f50d6fbdb0133008d4c2fb748961948</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cust Application">8f50d6fbdb0133008d4c2fb748961948</sys_scope>
+        <sys_security_acl display_value="x_83194_cust_appli_certificates">daf51affdb0133008d4c2fb7489619dc</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_96f51affdb0133008d4c2fb7489619df</sys_update_name>
+        <sys_updated_by>Jagdish-Admin</sys_updated_by>
+        <sys_updated_on>2019-05-03 10:22:33</sys_updated_on>
+        <sys_user_role display_value="x_83194_cust_appli.certificates_user" name="x_83194_cust_appli.certificates_user">c2f5da3fdb0133008d4c2fb7489619b6</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

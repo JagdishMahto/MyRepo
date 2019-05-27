@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>Get Retired on Expiry</name>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2019-05-17 07:39:25</run_start>
+        <run_time>1970-01-01 17:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[var gr1=new GlideRecord('x_nouin_nousvenafi_certificate_rqst');
+//gr1.addQuery('status','!=','retired');
+gr1.addEncodedQuery("status!=Retired^ORstatus=NULL^status!=Revoked^ORstatus=NULL");
+gr1.query();
+while(gr1.next())
+{
+var gdate=new GlideDateTime();
+var gdate1=gr1.certificate_valid_to;
+if(gdate1<gdate)
+{
+gs.info("Expiry date"+gr1.nickname);
+	gr1.status='Retired';
+	gr1.update();
+}
+}
+]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-05-17 07:40:21</sys_created_on>
+        <sys_id>81e6b91cdb2133008d4c2fb7489619cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Get Retired on Expiry</sys_name>
+        <sys_package display_value="Cust Application" source="x_83194_cust_appli">8f50d6fbdb0133008d4c2fb748961948</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cust Application">8f50d6fbdb0133008d4c2fb748961948</sys_scope>
+        <sys_update_name>sysauto_script_81e6b91cdb2133008d4c2fb7489619cc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-05-17 07:40:21</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>
